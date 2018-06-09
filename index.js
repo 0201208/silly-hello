@@ -19,10 +19,10 @@ var app = {
 
 
 
-
+/*
 if (window.DeviceMotionEvent || 'LinearAccelerationSensor' in window) {
     /*ADD AN EVENT LISTENER TO WINDOW*/
-    
+/*    
 }
 else {
     console.log("Sensors not supported");
@@ -80,14 +80,14 @@ function deviceMotionHandler(eventData) {
         if (Math.abs(mAcc.x) > shakyThreshold || Math.abs(mAcc.y) > shakyThreshold || Math.abs(mAcc.z) > shakyThreshold) {
             app.busy = true;
             /*DO SILLY STUFF*/
-
+/*
             app.busy = false;
         }
     }
 }
 
 /*UTILS*/
-
+/*
 function updateMaxValue(val, field) {
     if (Math.abs(val) > Math.abs(field)) {
         field = val;
@@ -108,6 +108,9 @@ function randomPicker(array) {
     let i = Math.floor(Math.random() * array.length);
     return array[i];
 }
-
+*/
 /* INSERT SCREAM FOR BUTTON CLICK FUNCTION HERE*/ 
-
+function scream() {
+    var scream = new Audio(randomPicker(app.audio));
+    scream.play();
+}
